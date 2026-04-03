@@ -75,7 +75,7 @@ export default function Navbar() {
         <Link to="/" className="flex items-center gap-3 group">
           {/* Logo Image */}
           <img 
-            src="/CompanyProfileMandirijayaMultiPerkasa/logo.png" 
+            src="/logo.png" 
             alt="Logo PT. Mandirijaya Multi Perkasa" 
             className="h-10 w-auto object-contain transition-transform group-hover:scale-105" 
           />
