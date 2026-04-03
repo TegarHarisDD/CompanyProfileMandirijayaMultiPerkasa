@@ -1,17 +1,109 @@
-# React + Vite
+# PT. MANDIRIJAYA MULTI PERKASA — Company Profile
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official company profile website for PT. MANDIRIJAYA MULTI PERKASA, a contractor specializing in aluminium, glass, and general construction services.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** — UI framework
+- **Vite 7** — Build tool
+- **Tailwind CSS 4** — Styling
+- **React Router DOM 7** — Client-side routing
+- **Supabase** — Database, Authentication, Storage
+- **Lucide React** — Icons
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js 18+
+- npm
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# CompanyProfileMandirijayaMultiPerkasa" 
+### Installation
+
+```bash
+npm install
+```
+
+### Environment Setup
+
+Create a `.env.local` file in the root directory:
+
+```env
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+### Build
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+├── components/         # Reusable UI components
+│   ├── Animation.jsx
+│   ├── Footer.jsx
+│   ├── Icons.jsx
+│   ├── Navbar.jsx
+│   └── ProtectedRoute.jsx
+├── context/            # React context providers
+│   ├── AuthContext.jsx
+│   └── CompanyContext.jsx
+├── layouts/            # Page layouts
+│   └── AdminLayout.jsx
+├── lib/                # External library configurations
+│   └── supabase.js
+├── pages/
+│   ├── about/          # About Us pages
+│   ├── admin/          # Admin dashboard pages
+│   ├── services/       # Service pages
+│   ├── Contact.jsx
+│   ├── Gallery.jsx
+│   ├── Home.jsx
+│   └── ProjectDetail.jsx
+└── App.jsx
+```
+
+## Features
+
+- **Public Pages**: Home, About, Services, Gallery, Project Details, Contact
+- **Admin Dashboard**: Manage projects, update company info, view dashboard
+- **Authentication**: Supabase Auth with protected admin routes
+- **Image Storage**: Supabase Storage for project images
+- **Responsive Design**: Mobile-first with Tailwind CSS
+
+## Security
+
+- Environment variables excluded from version control
+- Row Level Security (RLS) enforced on Supabase tables
+- Brute force protection on login (5 attempts → 60s lockout)
+- File upload validation (type, size, extension)
+- iframe sandbox and URL validation for embedded maps
+- Generic error messages to prevent information leakage
+
+## Deployment
+
+Build the project and deploy the `dist/` folder to any static hosting provider (Netlify, Vercel, GitHub Pages, etc.).
+
+```bash
+npm run build
+```
+
+## License
+
+Private — All rights reserved.
