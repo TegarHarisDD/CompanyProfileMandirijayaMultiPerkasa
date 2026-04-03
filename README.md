@@ -87,6 +87,18 @@ src/
 - **Image Storage**: Supabase Storage for project images
 - **Responsive Design**: Mobile-first with Tailwind CSS
 
+## Admin Panel
+
+The website includes a password-protected admin dashboard for managing content.
+
+- **Access URL**: `https://TegarHarisDD.github.io/CompanyProfileMandirijayaMultiPerkasa/#/admin/login`
+- **Login**: Use your Supabase-registered email and password
+
+### Admin Capabilities
+- **Project Manager** — Add, edit, and delete portfolio projects with image uploads
+- **Contact Manager** — Update company name, phone, email, address, and Google Maps embed
+- **Dashboard** — Overview of your company data
+
 ## Security
 
 - Environment variables excluded from version control
